@@ -4,7 +4,8 @@ export const ButonLoadMore = styled.button`
   margin-top: 16px;
   padding: 8px 16px;
   border-radius: 2px;
-  background-color: #3f51b5;
+  /* background-color: #3f51b5; */
+  background: linear-gradient(to right, yellow, blue);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: inline-block;
@@ -23,6 +24,6 @@ export const ButonLoadMore = styled.button`
 
   :hover,
   :focus {
-    background-color: #303f9f;
+    /* background-color: #303f9f; */
   }
 `;

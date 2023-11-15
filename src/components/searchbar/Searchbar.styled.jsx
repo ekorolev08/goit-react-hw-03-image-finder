@@ -15,7 +15,9 @@ export const SearchbarHeader = styled.div`
   padding-top: 12px;
   padding-bottom: 12px;
   color: #fff;
-  background-color: #3f51b5;
+  /* background-color: #3f51b5; */
+  background: linear-gradient(to right, yellow, blue);
+  transition: background 1.5s ease;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
@@ -25,15 +27,15 @@ export const SearchForm = styled.form`
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 15px;
   overflow: hidden;
 
   button {
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     border: 0;
     background-size: 40%;
     background-repeat: no-repeat;
@@ -73,6 +75,6 @@ export const SearchForm = styled.form`
 
   input::placeholder {
     font: inherit;
-    font-size: 18px;
+    font-size: 15px;
   }
 `;
