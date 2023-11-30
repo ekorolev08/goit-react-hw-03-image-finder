@@ -27,7 +27,7 @@ export class ImageGallery extends Component {
     }));
 
     // Микрозадача => в макрозадачу
-    setTimeout(() => {
+    // setTimeout(() => {
       fetchGalleryImg(this.props.searchQuery, this.state.page)
         .then(({ hits, totalHits }) => {
           if (hits.length === 0) {
@@ -44,7 +44,7 @@ export class ImageGallery extends Component {
         })
         .catch(error => this.setState({ error }))
         .finally(() => this.setState({ loading: false }));
-    });
+    // });
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -52,7 +52,7 @@ export class ImageGallery extends Component {
       this.setState({ loading: true, images: null, page: 1, hiddenBnt: false });
 
       // Микрозадача => в макрозадачу
-      setTimeout(() => {
+      // setTimeout(() => {
         fetchGalleryImg(this.props.searchQuery, this.state.page)
           .then(({ hits }) => {
             if (hits.length === 0) {
@@ -61,7 +61,7 @@ export class ImageGallery extends Component {
           })
           .catch(error => this.setState({ error }))
           .finally(() => this.setState({ loading: false }));
-      });
+      // });
     }
   }
 
