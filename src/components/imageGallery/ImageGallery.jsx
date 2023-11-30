@@ -5,7 +5,7 @@ import { ImageGalleryItem } from 'components/imageGalleryItem/ImageGalleryItem';
 import { Loader } from 'components/loader/Loader';
 import { Button } from 'components/button/Button';
 import { ImageGalleryUl, Container } from './ImageGallery.styled';
-import { fetchGalleryImg } from '../../Api/fetchGalleryImg';
+import { fetchGalleryImg } from '../App';
 
 export class ImageGallery extends Component {
   state = {
@@ -26,6 +26,7 @@ export class ImageGallery extends Component {
       hiddenBnt: false,
     }));
 
+    // Микрозадача => в макрозадачу
     setTimeout(() => {
       fetchGalleryImg(this.props.searchQuery, this.state.page)
         .then(({ hits, totalHits }) => {
@@ -50,6 +51,7 @@ export class ImageGallery extends Component {
     if (prevProps.searchQuery !== this.props.searchQuery) {
       this.setState({ loading: true, images: null, page: 1, hiddenBnt: false });
 
+      // Микрозадача => в макрозадачу
       setTimeout(() => {
         fetchGalleryImg(this.props.searchQuery, this.state.page)
           .then(({ hits }) => {
